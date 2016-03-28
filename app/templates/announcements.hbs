@@ -1,0 +1,17 @@
+<h1> Announcements!</h1>
+<ul>
+  {{#each model as |announcement|}}
+    <li>
+      <div>
+        <h3>{{announcement.title}}</h3>
+        <p>
+          {{announcement.body}}
+        </p>
+        <button {{action 'deleteAnnouncement' announcement}}>Delete</button>
+      </div>
+    </li>
+  {{/each}}
+</ul>
+
+
+{{new-announcement saveAnnouncement1="saveAnnouncement2"}}

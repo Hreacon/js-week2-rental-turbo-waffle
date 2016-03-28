@@ -1,0 +1,13 @@
+{{yield}}
+<li class="rental">
+  {{rental.owner}}'s {{rental.type}} in {{rental.city}}
+  <div {{action 'imageShow'}}>
+    {{#if isImageShowing}}
+    <p><img src="{{rental.image}}" alt="{{rental.type}}" /></p>
+    {{else}}
+    <button>Show Image</button>
+    {{/if}}
+  </div>
+  {{update-rental rental=rental update="update"}}
+  <button type="button" {{action 'delete' rental}}>Delete</button>
+</li>

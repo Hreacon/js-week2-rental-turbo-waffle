@@ -1,0 +1,9 @@
+{{#if bullshit}}
+  <form>
+    <label for="title" autofocus>title</label>{{input value=title id="title"}}
+    <label for="body">body</label>{{input value=body id="body"}}
+    <button {{action 'saveAnnouncement'}}>Save Announcement</button>
+  </form>
+{{else}}
+  <button {{action 'showAddForm'}}>Add Announcement</button>
+{{/if}}

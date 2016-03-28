@@ -1,0 +1,12 @@
+
+<p>
+  We hope you find exactly what you're looking for in a place to stay.
+</p>
+
+<ul class="rentals">
+  {{#each model as |rental|}}
+    {{rental-tile rental=rental destroyRental="destroyRental" update="update"}}
+  {{/each}}
+</ul>
+
+{{new-rental save2="save3"}}
