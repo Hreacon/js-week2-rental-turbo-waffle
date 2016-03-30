@@ -1,6 +1,6 @@
 {{yield}}
 <li class="rental">
-  {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city}}{{/link-to}}
+  {{#link-to 'rental' rental.id}}{{rental.owner}}'s {{rental.type}} in {{rental.city.name}}{{/link-to}}
   <div {{action 'imageShow'}}>
     {{#if isImageShowing}}
     <p><img src="{{rental.image}}" alt="{{rental.type}}" /></p>
